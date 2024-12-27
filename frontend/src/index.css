@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #000;
+  color: #fff;
+}
+
 .avatar {
   display: inline-flex;
   position: relative;
