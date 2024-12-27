@@ -89,7 +89,7 @@ export const getSuggestedUsers = async (req, res) => {
 };
 
 export const updateUser = async (req, res) => {
-	const { fullName, email, username, currentPassword, newPassword, bio, link } = req.body;
+	const { fullName, email, username, verified, currentPassword, newPassword, bio, link } = req.body;
 	let { profileImg, coverImg } = req.body;
 
 	const userId = req.user._id;
@@ -136,6 +136,7 @@ export const updateUser = async (req, res) => {
 		user.email = email || user.email;
 		user.username = username || user.username;
 		user.bio = bio || user.bio;
+		user.verified = verified || user.verified;
 		user.link = link || user.link;
 		user.profileImg = profileImg || user.profileImg;
 		user.coverImg = coverImg || user.coverImg;

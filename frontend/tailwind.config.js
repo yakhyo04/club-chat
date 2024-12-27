@@ -4,7 +4,11 @@ import daisyUIThemes from "daisyui/src/theming/themes";
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
-		extend: {},
+		extend: {
+			fill: {
+				customBlue: 'rgb(29, 155, 240)'
+			}
+		},
 	},
 	plugins: [daisyui],
 
